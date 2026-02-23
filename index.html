@@ -238,131 +238,208 @@
     observer.observe(section);
   });
 </script>
-<!-- TRUSTED CLIENTS CAROUSEL - LOGOS 1 À 15, CENTRÉS PARFAITEMENT AU SCROLL -->
-<section class="trusted-section py-5" id="trusted-section" style="background:#f8f8f8; width:100vw; margin-left:calc(-50vw + 50%);">
-  <div class="trusted-logos-wrapper position-relative overflow-hidden" style="display:flex; flex-direction:column; align-items:center; width:100%;">
-    <h3 class="section-title-sub text-primary mb-3 trusted-title" style="text-align:center;">Ils m'ont fait confiance</h3>
-    <div class="trusted-logos d-flex justify-content-center align-items-center" style="margin-top:20px; overflow:hidden; width:100%;">
-      <div class="logo-track d-flex">
-        <div class="logo-item mx-4"><img src="images/logo1.png" alt="Logo1"></div>
-        <div class="logo-item mx-4"><img src="images/logo2.png" alt="Logo2"></div>
-        <div class="logo-item mx-4"><img src="images/logo3.png" alt="Logo3"></div>
-        <div class="logo-item mx-4"><img src="images/logo4.png" alt="Logo4"></div>
-        <div class="logo-item mx-4"><img src="images/logo5.png" alt="Logo5"></div>
-        <div class="logo-item mx-4"><img src="images/logo6.png" alt="Logo6"></div>
-        <div class="logo-item mx-4"><img src="images/logo7.png" alt="Logo7"></div>
-        <div class="logo-item mx-4"><img src="images/logo8.png" alt="Logo8"></div>
-        <div class="logo-item mx-4"><img src="images/logo9.png" alt="Logo9"></div>
-        <div class="logo-item mx-4"><img src="images/logo10.png" alt="Logo10"></div>
-        <div class="logo-item mx-4"><img src="images/logo11.png" alt="Logo11"></div>
-        <div class="logo-item mx-4"><img src="images/logo12.png" alt="Logo12"></div>
-        <div class="logo-item mx-4"><img src="images/logo13.png" alt="Logo13"></div>
-        <div class="logo-item mx-4"><img src="images/logo14.png" alt="Logo14"></div>
-        <div class="logo-item mx-4"><img src="images/logo15.png" alt="Logo15"></div>
-        <div class="logo-item mx-4"><img src="images/logo16.png" alt="Logo16"></div>
-        <div class="logo-item mx-4"><img src="images/logo17.png" alt="Logo17"></div>
-        <div class="logo-item mx-4"><img src="images/logo18.png" alt="Logo18"></div>
-      </div>
+<!-- TRUSTED CLIENTS CAROUSEL - VERSION CORRIGÉE ET CENTRAGE PARFAIT -->
+<section class="trusted-section" id="trusted-section">
+
+  <h3 class="trusted-title">Ils m'ont fait confiance</h3>
+
+  <div class="trusted-logos-container">
+    <div class="logo-track">
+
+      <div class="logo-item"><img src="images/logo1.png"></div>
+      <div class="logo-item"><img src="images/logo2.png"></div>
+      <div class="logo-item"><img src="images/logo3.png"></div>
+      <div class="logo-item"><img src="images/logo4.png"></div>
+      <div class="logo-item"><img src="images/logo5.png"></div>
+      <div class="logo-item"><img src="images/logo6.png"></div>
+      <div class="logo-item"><img src="images/logo7.png"></div>
+      <div class="logo-item"><img src="images/logo8.png"></div>
+      <div class="logo-item"><img src="images/logo9.png"></div>
+      <div class="logo-item"><img src="images/logo10.png"></div>
+      <div class="logo-item"><img src="images/logo11.png"></div>
+      <div class="logo-item"><img src="images/logo12.png"></div>
+      <div class="logo-item"><img src="images/logo13.png"></div>
+      <div class="logo-item"><img src="images/logo14.png"></div>
+      <div class="logo-item"><img src="images/logo15.png"></div>
+      <div class="logo-item"><img src="images/logo16.png"></div>
+      <div class="logo-item"><img src="images/logo17.png"></div>
+      <div class="logo-item"><img src="images/logo18.png"></div>
+
     </div>
   </div>
+
 </section>
 
+
 <style>
+
+/* SECTION */
+.trusted-section {
+  background: #f8f8f8;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
 .trusted-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0d6efd;
+  font-size: 28px;
 }
 
-.logo-track {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
 
-.logo-item {
-  flex: 0 0 auto;
-  width: 400px;
-  height: 240px;
+/* CONTAINER */
+.trusted-logos-container {
+
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
+
 }
 
+
+/* TRACK */
+.logo-track {
+
+  display: flex;
+  align-items: center;
+
+  will-change: transform;
+
+}
+
+
+/* LOGO ITEM DESKTOP */
+.logo-item {
+
+  flex: 0 0 auto;
+
+  width: 320px;
+  height: 180px;
+
+  margin-left: 40px;
+  margin-right: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* IMAGE */
 .logo-item img {
-  width: 100%;
-  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+
 }
 
-.logo-item.center {
-  transform: scale(1.05);
+
+/* TABLETTE */
+@media (max-width: 768px) {
+
+  .logo-item {
+
+    width: 220px;
+    height: 140px;
+
+    margin-left: 25px;
+    margin-right: 25px;
+
+  }
+
 }
+
+
+/* TELEPHONE */
+@media (max-width: 480px) {
+
+  .logo-item {
+
+    width: 180px;
+    height: 110px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+  }
+
+}
+
 </style>
 
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const wrapper = document.querySelector('.trusted-logos-wrapper');
-  const track = document.querySelector('.logo-track');
-  const logos = Array.from(track.children);
-  const totalLogos = logos.length;
-  const wrapperWidth = wrapper.offsetWidth;
 
-  // Dupliquer les logos pour créer un carousel infini
-  track.innerHTML += track.innerHTML;
-  const allLogos = Array.from(track.children);
+document.addEventListener("DOMContentLoaded", function () {
 
-  function getLogoOffset(index) {
-    let offset = 0;
-    for (let i = 0; i < index; i++) {
-      const logo = allLogos[i];
-      const style = getComputedStyle(logo);
-      offset += logo.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
-    }
-    const currentLogo = allLogos[index];
-    const styleCurrent = getComputedStyle(currentLogo);
-    offset += currentLogo.offsetWidth / 2 + parseInt(styleCurrent.marginLeft) + parseInt(styleCurrent.marginRight)/2;
-    return offset - wrapperWidth / 2;
-  }
+  const track = document.querySelector(".logo-track");
+  const logos = document.querySelectorAll(".logo-item");
 
   let index = 0;
 
-  function updateCarousel() {
-    logos.forEach(l => l.classList.remove('center'));
-    track.style.transform = `translateX(${-getLogoOffset(index)}px)`;
-    logos[index % totalLogos].classList.add('center'); // centre toujours le logo original
+
+  function getTranslateX(element) {
+
+    const style = window.getComputedStyle(element);
+    const matrix = new DOMMatrix(style.transform);
+
+    return matrix.m41;
+
   }
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Centrer immédiatement le logo 1
-        updateCarousel();
 
-        // Boucle infinie du carousel après scroll
-        setInterval(() => {
-          index++;
-          updateCarousel();
+  function centerLogo(i, instant = false) {
 
-          // Reset transparent pour boucle infinie
-          if (index >= totalLogos) {
-            index = 0;
-            track.style.transition = 'none';
-            track.style.transform = `translateX(${-getLogoOffset(index)}px)`;
-            setTimeout(() => { track.style.transition = 'transform 0.8s ease-in-out'; }, 50);
-          }
-        }, 2000); // chaque logo au centre pendant 2 secondes
+    const logo = logos[i];
 
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
+    const container = document.querySelector(".trusted-logos-container");
 
-  observer.observe(wrapper);
+    const containerRect = container.getBoundingClientRect();
+    const logoRect = logo.getBoundingClientRect();
+
+    const containerCenter = containerRect.left + containerRect.width / 2;
+    const logoCenter = logoRect.left + logoRect.width / 2;
+
+    const move = logoCenter - containerCenter;
+
+    if (instant)
+      track.style.transition = "none";
+    else
+      track.style.transition = "transform 0.6s ease";
+
+
+    track.style.transform =
+      `translateX(${getTranslateX(track) - move}px)`;
+
+  }
+
+
+  function nextLogo() {
+
+    index++;
+
+    if (index >= logos.length)
+      index = 0;
+
+    centerLogo(index);
+
+  }
+
+
+  centerLogo(index, true);
+
+  setInterval(nextLogo, 2000);
+
 });
-</script>
 
+</script>
 
   <!-- PRODUCTIONS -->
 <section class="site-section services-section bg-light" id="services-section">
